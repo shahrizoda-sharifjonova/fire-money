@@ -9,9 +9,10 @@ html(lang="en")
     body 
         .wrapper 
             include components/header 
-            +header 
-            include components/main 
-            +main 
+            +header
+            .main
+                include components/intro 
+                +intro 
             include components/footer 
             +footer
         script(src="js/app.min.js") 

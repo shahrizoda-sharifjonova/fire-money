@@ -1,3 +1,15 @@
 mixin header()
     header.header 
-        p header
+        nav.header__nav.container
+            a(href="index.html").header__logo Fire#[b Money] 
+            ul.header__list 
+                li.header__li 
+                    a(href="#!").header__link Почему мы? 
+                li.header__li 
+                    a(href="#!").header__link О сервисе 
+                li.header__li 
+                    a(href="#!").header__link Вопросы-ответы
+            a(href="#!").header__btn.disable-xl входа в личный кабинет
+            a(href="#!").header__btn.enable-xl входа в кабинет
+            .menu.enable-md 
+                span.menu-btn

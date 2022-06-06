@@ -1,1 +1,189 @@
-// Шапка
+.header{
+    padding-top: 36px;
+    padding-bottom: 64px;
+    z-index: 1;
+    @include media(1200){
+        padding: 29px 0;
+    }
+    @include media(576){
+        padding: 14px 0 18px 0;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 26px;
+        color: #FFFFFF;
+        @include media(576){
+            font-size: 21px;
+        }
+        @include media(375){
+            font-size: 18px;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        @include media(1200){
+            column-gap: 25px;
+        }
+        @include media(768){
+            background: #FFC93F80;
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+            transform: translateX(100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease;
+        }
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__link{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        position: relative;
+        @include media(1200){
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        @include media(768){
+            font-size: 16px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            bottom: -10px;
+            border-radius: 20px 20px 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease;
+        }
+        &:hover{
+            &::before{
+                bottom: -15px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__btn{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FF7B00;
+        border-radius: 8px;
+        width: 242px;
+        height: 50px;
+        transition: 300ms ease;
+        &:hover{
+            background: lighten($color: #FF7B00, $amount: 4);
+        }
+        &.enable-xl{
+            @include media(1200){
+                display: flex !important;
+            }
+        }
+        @include media(1200){
+            font-size: 13px;
+            line-height: 15px;
+            width: 176px;
+        }
+        @include media(576){
+            font-size: 12px;
+            line-height: 14px;
+            width: 155px;
+            height: 39px;
+        }
+        @include media(375){
+            width: 130px;
+        }
+    }
+    .menu{
+        width: 39px;
+        height: 39px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #FFFFFF;
+        border-radius: 8px;
+        @include media(768){
+            display: flex !important;
+        }
+        &-btn{
+            background: #FF7B00;
+            border-radius: 8px;
+            width: 20px;
+            height: 3px;
+            display: block;
+            transition: 300ms ease;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 3px;
+            background: #FF7B00;
+            border-radius: 8px;
+            top: 11px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 300ms ease;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 3px;
+            background: #FF7B00;
+            border-radius: 8px;
+            bottom: 11px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 300ms ease;
+        }
+        &.active{
+            .menu-btn{
+                display: none;
+            }
+            &::before{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &::after{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}

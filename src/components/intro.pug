@@ -1,0 +1,28 @@
+mixin intro()
+    .intro 
+        .intro__body.container
+            .intro__texts 
+                a(href="#!").intro__btn #[img(src="@img/intro-fire.svg", alt="" draggable="false" loading="lazy")] Горячие предложения  
+                h1.intro__title быстрых займов по всей России! 
+                p.intro__desc Без проверки кредитной истории. От 1 000 ₽ за 15 минут.
+                p.intro__p Внимание! Услуга обработки заявки платная и составляет от 98 ₽ до 398 ₽ раз в неделю
+            .intro__content 
+                .intro__img 
+                    img(src="@img/intro-girl.png", alt="")
+                .add 
+                    .add__item
+                        span.add__title Cумма кредита
+                        .sliderValue 
+                            span 0 ₽ 
+                        .field 
+                            .value.left 1 000 ₽ 
+                            input(type="range" min="0" max="100000" value="100" steps="50")
+                            .value.right 100 000 ₽ 
+                    .add__item
+                        span.add__title Cрок кредита
+                    a(href="#!").add__btn.btn Оформить заявку 
+                    ul.add__list 
+                        li.add__li Вы берете #[br] #[span 20 000 ₽]
+                        li.add__li К возврату #[br] #[span 25 650 ₽]
+                        li.add__li Дата возврата #[br] #[span 08 января 2022]
+                        li.add__li Ежемесячный платеж #[br] #[span 5 650 ₽]
