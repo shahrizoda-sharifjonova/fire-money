@@ -22,10 +22,13 @@ const inputSlider = document.querySelector('.field input');
 inputSlider.oninput = (()=>{
     let value = inputSlider.value;
     slideValue.textContent = value + " ₽";
-    slideValue.style.left = (value/450) + "%";
+})
 
-    if(slideValue.style.left = "190%"){
-        slideValue.style.right="0"
-    }
-});
+const slideValue2 = document.querySelector('.add__item_second .sliderValue span');
+const inputSlider2 = document.querySelector('.add__item_second .field input');
+
+inputSlider2.oninput = (()=>{
+    let value = inputSlider2.value;
+    slideValue2.textContent = value + " дней";
+})
 

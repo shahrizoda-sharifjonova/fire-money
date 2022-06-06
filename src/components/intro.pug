@@ -13,13 +13,19 @@ mixin intro()
                     .add__item
                         span.add__title Cумма кредита
                         .sliderValue 
-                            span 0 ₽ 
+                            span 65 000 ₽ 
                         .field 
                             .value.left 1 000 ₽ 
-                            input(type="range" min="0" max="100000" value="100" steps="50")
+                            input(type="range" min="1000" max="100000" value="65 000" steps="100")
                             .value.right 100 000 ₽ 
-                    .add__item
+                    .add__item.add__item_second
                         span.add__title Cрок кредита
+                        .sliderValue 
+                            span 8 дней
+                        .field 
+                            .value.left 3 
+                            input(type="range" min="3" max="30" value="8" steps="100")
+                            .value.right 30
                     a(href="#!").add__btn.btn Оформить заявку 
                     ul.add__list 
                         li.add__li Вы берете #[br] #[span 20 000 ₽]

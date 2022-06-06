@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220606125655">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220606182625">
     <title>Document</title>
   </head>
   <body> 
@@ -31,14 +31,21 @@
                       <div class="intro__img"> <picture><source srcset="img/intro-girl.webp" type="image/webp"><img src="img/intro-girl.png" alt=""></picture></div>
                       <div class="add"> 
                         <div class="add__item"><span class="add__title">Cумма кредита</span>
-                          <div class="sliderValue"> <span>0 ₽ </span></div>
+                          <div class="sliderValue"> <span>65 000 ₽ </span></div>
                           <div class="field"> 
                             <div class="value left">1 000 ₽ </div>
-                            <input type="range" min="0" max="100000" value="100" steps="50">
+                            <input type="range" min="1000" max="100000" value="65 000" steps="100">
                             <div class="value right">100 000 ₽ </div>
                           </div>
                         </div>
-                        <div class="add__item"><span class="add__title">Cрок кредита</span></div><a class="add__btn btn" href="#!">Оформить заявку </a>
+                        <div class="add__item add__item_second"><span class="add__title">Cрок кредита</span>
+                          <div class="sliderValue"> <span>8 дней</span></div>
+                          <div class="field"> 
+                            <div class="value left">3 </div>
+                            <input type="range" min="3" max="30" value="8" steps="100">
+                            <div class="value right">30</div>
+                          </div>
+                        </div><a class="add__btn btn" href="#!">Оформить заявку </a>
                         <ul class="add__list"> 
                           <li class="add__li">Вы берете <br> <span>20 000 ₽</span></li>
                           <li class="add__li">К возврату <br> <span>25 650 ₽</span></li>
@@ -52,6 +59,6 @@
       </div>
             <footer class="footer"> </footer>
     </div>
-    <script src="js/app.min.js?_v=20220606125655"> </script>
+    <script src="js/app.min.js?_v=20220606182625"> </script>
   </body>
 </html>

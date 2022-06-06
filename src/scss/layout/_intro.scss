@@ -3,6 +3,8 @@
     width: 100%;
     margin-top: -150px;
     padding-top: 150px;
+    padding-bottom: 70px;
+    position: relative;
     &__body{
         display: flex;
         justify-content: space-between;
@@ -61,6 +63,12 @@
     }
     &__img{
         line-height: 0;
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-40%);
+        bottom: 0;
+        pointer-events: none;
     }
     .add{
         background: rgba(255, 255, 255, 0.9);
@@ -68,19 +76,21 @@
         backdrop-filter: blur(12px);
         border-radius: 15px;
         padding: 29px 19px 36px 28px;
+        // margin-top: 60px;
+        max-width: 430px;
+        width: 100%;
         &__item{
             display: flex;
             flex-direction: column;
             position: relative;
-            row-gap: 40px;
+            row-gap: 25px;
             margin-bottom: 60px;
-        }
+        }        
         .sliderValue{
             position: relative;
             max-width: 100px !important;
             width: 100px !important;
             span{
-                // height: 45px;
                 width: max-content;
                 position: absolute;
                 font-weight: 700;
@@ -88,7 +98,8 @@
                 line-height: 24px;
                 color: #45515F;
                 z-index: 2;
-                left: 0;
+                left: 0 !important;
+                top: -15px;
             }
         }
         .field{
@@ -99,7 +110,7 @@
             height: 100%;
             input{
                 -webkit-appearance: none;
-                height: 3px;
+                height: 7px;
                 width: 100%;
                 background: #ECECEC;
                 border-radius: 8px;
@@ -129,6 +140,37 @@
                     right: 0;
                     bottom: -25px;
                 }
+            }
+        }
+        &__title{
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #45515F;
+        }
+        &__btn{
+            margin-bottom: 60px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &__list{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        &__li{
+            width: calc(50% - 10px);
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #45515F;
+            span{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: #F28925;
             }
         }
     }
