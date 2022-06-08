@@ -5,10 +5,25 @@
     padding-top: 150px;
     padding-bottom: 70px;
     position: relative;
+    @include media(1200){
+        padding-bottom: 0;
+    }
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media(1200){
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 60px;
+        }
+    }
+    &__texts{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
     }
     &__btn{
         font-weight: 500;
@@ -39,6 +54,14 @@
         max-width: 477px;
         width: 100%;
         margin-bottom: 15px;
+        @include media(1200){
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 111.5%;
+            max-width: 100%;
+            margin-bottom: 5px;
+            text-align: center;
+        }
     }
     &__desc{
         font-weight: 400;
@@ -48,6 +71,11 @@
         max-width: 477px;
         width: 100%;
         margin-bottom: 110px;
+        @include media(1200){
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
     }
     &__p{
         font-weight: 300;
@@ -56,10 +84,17 @@
         color: #FFFFFF;
         max-width: 300px;
         width: 100%;
+        @include media(1200){
+            max-width: 100%;
+            text-align: center;
+        }
     }
     &__content{
         display: flex;
         align-items: flex-start;
+        @include media(1200){
+            justify-content: flex-end;
+        }
     }
     &__img{
         line-height: 0;
@@ -69,6 +104,17 @@
         transform: translateX(-40%);
         bottom: 0;
         pointer-events: none;
+        @include media(1200){
+            bottom: 0;
+            left: 0;
+            transform: translateX(0);
+            height: 660px;
+        }
+        img{
+            @include media(1200){
+                height: 100%;
+            }
+        }
     }
     .add{
         background: rgba(255, 255, 255, 0.9);
