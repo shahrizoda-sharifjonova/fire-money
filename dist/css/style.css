@@ -328,21 +328,6 @@
           align-items: center;
 }
 
-.intro__texts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
 .intro__btn {
   font-weight: 500;
   font-size: 22px;
@@ -425,6 +410,10 @@
           transform: translateX(-40%);
   bottom: 0;
   pointer-events: none;
+}
+
+.intro__img img {
+  line-height: 0;
 }
 
 .intro .add {
@@ -714,7 +703,7 @@ button {
   }
 
   .intro {
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 
   .intro__body {
@@ -726,6 +715,21 @@ button {
         -ms-flex-align: start;
             align-items: flex-start;
     row-gap: 60px;
+  }
+
+  .intro__texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
 
   .intro__title {
@@ -752,6 +756,10 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 100%;
   }
 
   .intro__img {
@@ -761,6 +769,7 @@ button {
         -ms-transform: translateX(0);
             transform: translateX(0);
     height: 660px;
+    left: 0;
   }
 
   .intro__img img {
@@ -775,6 +784,15 @@ button {
 
   .disable-lg {
     display: none !important;
+  }
+
+  .intro__img {
+    display: none;
+  }
+
+  .intro .add {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -861,6 +879,45 @@ button {
     line-height: 14px;
     width: 155px;
     height: 39px;
+  }
+
+  .intro__btn {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .intro__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 111.5%;
+    margin-bottom: 20px;
+  }
+
+  .intro__desc {
+    font-size: 20px;
+    line-height: 133.5%;
+    margin-bottom: 18px;
+  }
+
+  .intro__p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 145.5%;
+  }
+
+  .intro .add {
+    padding: 29px 32px 36px 28px;
+    max-width: 100%;
+  }
+
+  .intro .add__btn {
+    width: 230px;
+  }
+
+  .intro .add__list {
+    padding: 0;
   }
 }
 
