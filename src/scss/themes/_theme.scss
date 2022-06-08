@@ -49,3 +49,15 @@ button{
     justify-content: center;
     align-items: center;
 }
+.title{
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: #45515F;
+}
+.section{
+    padding: 50px 0;
+    @include media(576){
+        padding: 30px 0;
+    }
+}
