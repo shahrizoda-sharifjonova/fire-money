@@ -1,4 +1,9 @@
 .offer{
+    border-bottom: 1px solid rgba(69, 81, 95, 0.05);
+    background: #F6F9FC;
+    @include media(1200){
+        border-bottom: none;
+    }
     &__title{
         text-align: center;
         margin-bottom: 36px;
@@ -32,6 +37,8 @@
         }
         @include media(576){
             padding: 35px;
+            max-width: 100%;
+            width: 100%;
         }
         &:nth-of-type(2){
             .offer__subtitle{
@@ -79,9 +86,22 @@
         @include media(576){
             font-size: 12px;
             column-gap: 4px;
+            text-align: center;
+            justify-content: center;
         }
         span{
             font-weight: 500;
+        }
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 145.5%;
+        color: #45515F;
+        margin-top: 33px;
+        text-align: center;
+        @include media(576){
+            margin-top: 25px;
         }
     }
 }

@@ -1,0 +1,113 @@
+.how{
+    background: #F6F9FC;
+    &__title{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 44px;
+        position: relative;
+        @include media(768){
+            display: none;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            background: #FFFFFF;
+            height: 7px;
+            top: 125px;
+            @include media(768){
+                display: none;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            height: 7px;
+            top: 125px;
+            width: 130px;
+            background: linear-gradient(81.55deg, #FFC83E 33.93%, #FF9F47 73.78%);
+            border-radius: 8px;
+            @include media(992){
+                width: 100px;
+            }
+            @include media(768){
+                display: none;
+            }
+        }
+    }
+    &__row{
+        @include media(768){
+            display: flex !important;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 250px;
+        width: 100%;
+        @include media(768){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &__img{
+        line-height: 0;
+        margin-bottom: 34px;
+        height: 77px;
+        @include media(768){
+            width: 77px;
+        }
+        img{
+            line-height: 0;
+        }
+    }
+    &__num {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145.5%;
+        text-align: center;
+        color: #D6D3D3;
+        background: #FFFFFF;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 21px;
+        z-index: 1;
+        @include media(768){
+            display: none;
+        }
+        &.active{
+            color: #FFFFFF;
+            background: #FFA147;
+        }
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 132%;
+        text-align: center;
+        color: #45515F;
+        text-align: center;
+        @include media(768){
+            max-width: 196px;
+            width: 100%;
+            text-align: left;
+        }
+    }
+    &__btn{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
