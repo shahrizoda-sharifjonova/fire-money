@@ -32,3 +32,22 @@ inputSlider2.oninput = (()=>{
     slideValue2.textContent = value + " дней";
 })
 
+const whyBtn = document.querySelector('.why__button');
+const openContent = document.querySelector('.open-content');
+const whyContent = document.querySelectorAll('.why__content');
+
+whyBtn.addEventListener('click', (e)=>{
+    whyContent.forEach(el => {
+        el.classList.toggle('active')
+    });
+    openContent.classList.toggle('active')
+    whyBtn.classList.toggle('hidden')
+})
+openContent.addEventListener('click', (e)=>{
+    whyContent.forEach(el => {
+        el.classList.remove('active')
+    });
+    openContent.classList.remove('active')
+    whyBtn.classList.remove('hidden')
+})
+
