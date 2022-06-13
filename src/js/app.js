@@ -51,3 +51,13 @@ openContent.addEventListener('click', (e)=>{
     whyBtn.classList.remove('hidden')
 })
 
+const servicesContent = document.querySelectorAll('.services__content');
+const servicesBtn = document.querySelector('.services__button');
+
+servicesBtn.addEventListener('click', (e)=>{
+    servicesBtn.classList.toggle('active')
+    servicesContent.forEach(el => {
+        el.classList.toggle('active')
+    });
+})
+

@@ -951,6 +951,7 @@
 .clients__title {
   margin-bottom: 35px;
   text-align: center;
+  color: #fff !important;
 }
 
 .clients__content {
@@ -1015,6 +1016,73 @@
   font-size: 15px;
   line-height: 18px;
   color: #93A0AB;
+}
+
+.services__title {
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.services__content:nth-of-type(2) {
+  display: none;
+  margin-top: 30px;
+}
+
+.services__content:nth-of-type(2).active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services__item {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #F8EBEB;
+  -webkit-box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+          box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 45px;
+}
+
+.services__subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #45515F;
+  margin-bottom: 30px;
+}
+
+.services__p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #536473;
+}
+
+.services__button {
+  width: 100%;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.services__button.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: left;
 }
 
 * {
@@ -1291,6 +1359,14 @@ button {
   .clients__item {
     width: calc(50% - 7.5px);
   }
+
+  .services__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1465,6 +1541,14 @@ button {
        -moz-column-gap: 25px;
             column-gap: 25px;
     padding-left: 25px;
+  }
+
+  .services__item {
+    padding: 34px 27px 40px 27px;
+  }
+
+  .services__subtitle {
+    margin-bottom: 25px;
   }
 }
 

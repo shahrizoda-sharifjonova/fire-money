@@ -3,6 +3,7 @@
     &__title{
         margin-bottom: 35px;
         text-align: center;
+        color: #fff !important;
         @include media(768){
             margin-bottom: 30px;
         }
