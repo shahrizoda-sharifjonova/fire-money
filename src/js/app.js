@@ -20,7 +20,7 @@ const slideValue = document.querySelector('.sliderValue span');
 const inputSlider = document.querySelector('.field input');
 
 inputSlider.oninput = (()=>{
-    let value = inputSlider.value;
+    let value = inputSlider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     slideValue.textContent = value + " ₽";
 })
 
@@ -60,4 +60,25 @@ servicesBtn.addEventListener('click', (e)=>{
         el.classList.toggle('active')
     });
 })
+
+$(document).ready(function() {
+    $(".accordion > .accordion__button").on("click", function() {
+      if ($(this).hasClass("active")) {
+        $(".accordion").removeClass("active")
+        $(this)
+          .removeClass("active")
+          .siblings(".accordion__content")
+          .slideUp(200);
+      } else {
+        $(".accordion").removeClass("active")
+        $(".accordion > .accordion__button").removeClass("active");
+        $(this).addClass("active");
+        $(".accordion__content").slideUp(200);
+        $(this)
+          .siblings(".accordion__content")
+          .slideDown(200)
+          .parent().addClass("active");
+      }
+    });
+  });
 
