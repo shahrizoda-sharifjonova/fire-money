@@ -1,1 +1,194 @@
-// Футер
+.footer{
+    padding: 50px 0;
+    background: url(../img/footer-bg.svg) center / cover no-repeat;
+    @include media(575){ 
+        padding: 30px 0;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 30px;
+        @include media(768){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 24px;
+        }
+    }
+    &__logo{
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 26px;
+        color: #FFFFFF;
+    }
+    &__email{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    &__phone{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+    &__list,
+    &__info,
+    &__content{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 30px 0;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 55px;
+        @include media(768){
+            column-gap: 20px;
+        }
+        @include media(375){
+            flex-direction: column;
+            rg
+        }
+    }
+    &__link{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        @include media(768){
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 23px;
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    &__carts{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 37px;
+        margin-bottom: 40px;
+        @include media(768){
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            row-gap: 20px;
+        }
+    }
+    &__txt{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        max-width: 118px;
+        width: 100%;
+        @include media(768){
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+    &__images{
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+    }
+    &__btn{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        width: 100%;
+        height: 86px;
+        border: 1px solid #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__bottom{
+        padding-top: 45px ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 33px;
+        @include media(768){
+            padding-top: 30px;
+        }
+    }
+    &__desc{
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 20px;
+            max-width: 260px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__offer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media(768){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+    }
+    &__button{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #FEFEFE;
+        width: 170px;
+        height: 45px;
+        border: 1px solid #FEFEFE;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 35px;
+        @include media(768){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__icon{
+        &:not(:last-of-type){
+            padding-right: 23px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &:not(:first-of-type){
+            padding-left: 23px;
+        }
+    }
+}
