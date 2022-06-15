@@ -2,6 +2,9 @@
     &__title{
         text-align: center;
         margin-bottom: 35px;
+        @include media(768){
+            margin-bottom: 29px;
+        }
     }
     &__content{
         display: flex;
@@ -32,10 +35,19 @@
             justify-content: space-between;
             align-items: center;
             column-gap: 15px;
+            @include media(768){
+                padding: 21px 18px 25px 18px;
+                font-size: 16px;
+                line-height: 19px;
+            }
             &.active{
                 color: #fff;
                 background: none;
                 backdrop-filter: blur(0);
+                padding-bottom: 17px;
+                @include media(768){
+                    padding-bottom: 14px;
+                }
                 &::before{
                     opacity: 1;
                     visibility: visible;
@@ -60,6 +72,9 @@
             padding: 0 33px 33px 33px;
             z-index: 1;       
             position: relative;
+            @include media(768){
+                padding: 0 55px 25px 18px;
+            }
             p{
                 font-weight: 300;
                 font-size: 16px;
@@ -67,6 +82,11 @@
                 color: #FFFFFF;
                 max-width: 1120px;
                 width: 100%;   
+                @include media(768){
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
         }
     }
