@@ -819,6 +819,10 @@
   margin-left: auto;
 }
 
+.why {
+  background: #F6F9FC;
+}
+
 .why__title {
   text-align: center;
   margin-bottom: 43px;
@@ -1085,6 +1089,10 @@
   text-align: left;
 }
 
+.asks {
+  background: #F6F9FC;
+}
+
 .asks__title {
   text-align: center;
   margin-bottom: 35px;
@@ -1191,6 +1199,45 @@
   color: #FFFFFF;
   max-width: 1120px;
   width: 100%;
+}
+
+.history {
+  background: #FEFEFE;
+  padding: 0 !important;
+}
+
+.history__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history__title {
+  margin-bottom: 25px;
+}
+
+.history__desc {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 133.5%;
+  color: #536473;
+  margin-bottom: 25px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.history__img {
+  line-height: 0;
+}
+
+.history__img img {
+  line-height: 0;
 }
 
 * {
@@ -1475,6 +1522,55 @@ button {
             flex-direction: column;
     row-gap: 30px;
   }
+
+  .history {
+    padding-top: 50px !important;
+  }
+
+  .history__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 32px;
+  }
+
+  .history__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 25px;
+  }
+
+  .history__title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .history__desc {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .history__img {
+    width: 100%;
+  }
+
+  .history__img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1682,6 +1778,10 @@ button {
     font-size: 14px;
     line-height: 17px;
   }
+
+  .history__desc {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1796,6 +1896,10 @@ button {
 
   .how__content {
     row-gap: 30px;
+  }
+
+  .history {
+    padding-top: 30px !important;
   }
 
   .section {
