@@ -22,7 +22,22 @@ const inputSlider = document.querySelector('.field input');
 inputSlider.oninput = (()=>{
     let value = inputSlider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     slideValue.textContent = value + " ₽";
+    let slideValueText = slideValue.textContent
+    let toTake = document.getElementById('toTake')
+    toTake.innerText = slideValueText
+    toReturn.innerText = (slideValueText * 2) / 100
 })
+
+let toTake = document.getElementById('toTake')
+let toReturn = document.getElementById('toReturn')
+let date = document.getElementById('date')
+let payment = document.getElementById('payment')
+let slideValueText = slideValue.textContent
+toTake.innerText = slideValueText
+toReturn.innerText = (slideValueText * 2) / 100
+console.log(slideValueText * 2);
+
+
 
 const slideValue2 = document.querySelector('.add__item_second .sliderValue span');
 const inputSlider2 = document.querySelector('.add__item_second .field input');
@@ -80,5 +95,5 @@ $(document).ready(function() {
           .parent().addClass("active");
       }
     });
-  });
+});
 
