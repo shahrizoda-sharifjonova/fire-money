@@ -19,24 +19,28 @@ menu.addEventListener('click', (e)=>{
 const slideValue = document.querySelector('.sliderValue span');
 const inputSlider = document.querySelector('.field input');
 
+slideValue.textContent = inputSlider.value
+
 inputSlider.oninput = (()=>{
     let value = inputSlider.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     slideValue.textContent = value + " ₽";
     let slideValueText = slideValue.textContent
     let toTake = document.getElementById('toTake')
     toTake.innerText = slideValueText
-    toReturn.innerText = (slideValueText * 2) / 100
+    toTake.innerText = slideValueText
+    let toReturnNum = `${Math.round(Number(inputSlider.value) + (inputSlider.value * 15 / 100)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} ₽`
+    toReturn.innerText = toReturnNum
+    payment.textContent = `${Math.round(Number(inputSlider.value * 15 / 100 + 500)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} ₽`
 })
 
 let toTake = document.getElementById('toTake')
 let toReturn = document.getElementById('toReturn')
-let date = document.getElementById('date')
 let payment = document.getElementById('payment')
 let slideValueText = slideValue.textContent
 toTake.innerText = slideValueText
-toReturn.innerText = (slideValueText * 2) / 100
-console.log(slideValueText * 2);
-
+let toReturnNum = `${Math.round(Number(inputSlider.value) + (inputSlider.value * 15 / 100)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} ₽`
+toReturn.innerText = toReturnNum
+payment.textContent = `${Math.round(Number(inputSlider.value * 15 / 100 + 500)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} ₽`
 
 
 const slideValue2 = document.querySelector('.add__item_second .sliderValue span');
@@ -45,7 +49,14 @@ const inputSlider2 = document.querySelector('.add__item_second .field input');
 inputSlider2.oninput = (()=>{
     let value = inputSlider2.value;
     slideValue2.textContent = value + " дней";
+    let date = document.getElementById('date')
+    date.textContent = value + " июня 2022"
 })
+
+let value = inputSlider2.value;
+slideValue2.textContent = value + " дней";
+let date = document.getElementById('date')
+date.textContent = value + " июня 2022"
 
 const whyBtn = document.querySelector('.why__button');
 const openContent = document.querySelector('.open-content');
